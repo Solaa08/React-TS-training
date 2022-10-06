@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+body {
+  color: rgb(0, 0, 0);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.List {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  width: 50rem;
+  margin: 0rem auto;
+  border: 0.1rem solid rgba(0, 0, 0, 0.233);
+  padding: 1rem;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  margin-top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.List-header {
+  display: flex;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.List-img {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.discription {
+  width: 30%;
+  text-align: left;
+}
+
+.AddToList {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 30rem;
+  margin: 2rem auto;
+  padding-bottom: 10px
+}
+
+.AddToList-input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin: 0.3rem 0rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.233);
+  border-radius: 5px;
+}
+
+.AddToList-btn {
+  padding: 0.5rem;
+  cursor: pointer;
+  background-color: #3b78ea;
+  font-weight: 700;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
 }

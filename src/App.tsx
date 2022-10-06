@@ -1,24 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
+import {useState} from 'react'
 import './App.css';
 
+// Import Component 
+import List from './components/List';
+import AddList from './components/AddList';
+
+
+export interface AppState {
+  people : {
+    name: string;
+    age: number,
+    img: string,
+    discription?: string
+  }[];
+}
+
 function App() {
+
+  const [people, setPeople] = useState<AppState['people']>([
+    {
+      name: "Bill Gates",
+      age: 66,
+      img: "",
+      discription: "William Henry Gates III is an American business magnate, software developer",
+    }
+  ])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <List people={people} />
+      <AddList people={people} setPeople={setPeople} />
+
     </div>
   );
 }
